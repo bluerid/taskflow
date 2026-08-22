@@ -7,12 +7,14 @@
     "dev": "tsx watch src/server.ts",
     "start": "node dist/server.js",
     "lint": "eslint src",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "@fastify/cors": "^11.3.0",
     "@fastify/env": "^7.0.0",
