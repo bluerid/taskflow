@@ -8,5 +8,6 @@ declare module "fastify" {
       REDIS_URL: string;
       JWT_SECRET: string;
     };
+    db: any;
   }
 }
