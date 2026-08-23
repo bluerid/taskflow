@@ -2,3 +2,8 @@ export * from "./users.js";
 export * from "./organizations.js";
 export * from "./org-members.js";
 export * from "./enums.js";
+export * from "./projects.js";
+export * from "./tasks.js";
+export * from "./task-assignments.js";
+export * from "./comments.js";
+export * from "./refresh-tokens.js";
