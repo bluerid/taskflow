@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import { randomBytes, createHash } from "crypto";
+import type { FastifyRequest } from "fastify";
 
 /**
  * Hash a password using bcrypt with cost factor 12+.
@@ -39,13 +40,13 @@ export function hashRefreshToken(token: string): string {
  * Extract the client IP from request, respecting proxies.
  * Assumes trustProxy is set appropriately in Fastify.
  */
-export function getRequestIP(req: Request): string {
+export function getRequestIP(req: FastifyRequest): string {
     return req.ip ?? req.headers["x-forwarded-for"] as string ?? "unknown";
 }
 
 /**
  * Extract user agent from request.
  */
-export function getUserAgent(req: Request): string | null {
+export function getUserAgent(req: FastifyRequest): string | null {
     return req.headers["user-agent"] ?? null;
 }

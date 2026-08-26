@@ -1,5 +1,4 @@
-import { FastifyInstance } from "fastify";
-import * as schema from "@/db/schema/index.js";
+import type { FastifyInstance } from "fastify";
 
 /**
  * User information extracted from JWT payload.
