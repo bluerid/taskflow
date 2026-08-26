@@ -11,7 +11,7 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc",
     "db:generate": "node --env-file=.env.local ./node_modules/drizzle-kit/bin.cjs generate",
-    "db:migrate": "node --env-file=.env.local ./node_modules/drizzle-kit/bin.cjs migrate",
+    "db:migrate": "drizzle-kit migrate --config=drizzle.config.ts",
     "db:seed": "tsx --env-file=.env src/db/seed.ts"
   },
   "keywords": [],

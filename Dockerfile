@@ -29,6 +29,9 @@ COPY --from=deps /app/node_modules ./node_modules
 # Copy package.json for potential npm commands (optional)
 COPY package*.json ./
 
+COPY --from=builder /app/drizzle.config.ts ./drizzle.config.ts
+COPY --from=builder /app/src/db/migrations ./src/db/migrations
+
 # Expose the port the app runs on
 EXPOSE 3000
 
